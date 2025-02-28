@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Pick a Box!</title>
+</head>
+<body>
+<h1>Welcome to the Gameshow!</h1>
+<p>Pick a box to reveal your prize!</p>
+<form action="/play" method="get">
+  <button type="submit" name="box" value="0">Box 1</button>
+  <button type="submit" name="box" value="1">Box 2</button>
+  <button type="submit" name="box" value="2">Box 3</button>
+  <button type="submit" name="box" value="3">Box 4</button>
+  <button type="submit" name="box" value="4">Box 5</button>
+</form>
+</body>
+</html>
