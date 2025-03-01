@@ -21,10 +21,19 @@ public class GameController {
 
         model.addAttribute("userPick", game.getUserPick());
         model.addAttribute("prize", game.getPrize());
+
         model.addAttribute("lossPrizeOne", game.getPrizeLossOne());
+        model.addAttribute("userPickLossOne", Game.getUserPickLoss());
+
         model.addAttribute("lossPrizeTwo", game.getPrizeLossTwo());
+        model.addAttribute("userPickLossTwo", Game.getUserPickLoss());
+
         model.addAttribute("lossPrizeThree", game.getPrizeLossThree());
+        model.addAttribute("userPickLossThree", Game.getUserPickLoss());
+
+
         model.addAttribute("lossPrizeFour", game.getPrizeLossFour());
+        model.addAttribute("userPickLossFour", Game.getUserPickLoss());
 
         return "result";
     }

@@ -12,6 +12,7 @@ public class Game {
     private String lossPrizeThree;
     private String lossPrizeFour;
 
+    public static int userPickLoss;
 
     public Game() {
         shuffleBoxes();
@@ -23,6 +24,7 @@ public class Game {
 
     public void setUserPick(int index) {
         this.userPick = (index + 1);
+        userPickLoss = (index + 1);
         this.prize = boxes[index];
         this.lossPrizeOne = boxes[(index + 1 ) % 5 ];
         this.lossPrizeTwo = boxes[(index + 2 ) % 5 ];
@@ -48,6 +50,19 @@ public class Game {
 
     public int getUserPick() {
         return userPick;
+    }
+
+
+    public static int getUserPickLoss() {
+        if(((userPickLoss + 1) % 6) != 0){
+            userPickLoss ++;
+
+        }
+        else{
+            userPickLoss = 1;
+        }
+        return userPickLoss;
+
     }
 }
 
