@@ -5,8 +5,13 @@ import java.util.Collections;
 
 public class Game {
     private final String[] boxes = {"Car", "Nothing", "Trip", "Money", "Nothing"};
-    private String userPick;
+    private int userPick;
     private String prize;
+    private String lossPrizeOne;
+    private String lossPrizeTwo;
+    private String lossPrizeThree;
+    private String lossPrizeFour;
+
 
     public Game() {
         shuffleBoxes();
@@ -17,18 +22,33 @@ public class Game {
     }
 
     public void setUserPick(int index) {
-        this.userPick = "Box " + (index + 1);
+        this.userPick = (index + 1);
         this.prize = boxes[index];
+        this.lossPrizeOne = boxes[(index + 1 ) % 5 ];
+        this.lossPrizeTwo = boxes[(index + 2 ) % 5 ];
+        this.lossPrizeThree = boxes[(index + 3 ) % 5 ];
+        this.lossPrizeFour = boxes[(index + 4 ) % 5 ];
     }
 
     public String getPrize() {
         return prize;
     }
-
-    public String getUserPick() {
-        return userPick;
+    public String getPrizeLossOne() {
+        return lossPrizeOne;
+    }
+    public String getPrizeLossTwo() {
+        return lossPrizeTwo;
+    }
+    public String getPrizeLossThree() {
+        return lossPrizeThree;
+    }
+    public String getPrizeLossFour() {
+        return lossPrizeFour;
     }
 
+    public int getUserPick() {
+        return userPick;
+    }
 }
 
 

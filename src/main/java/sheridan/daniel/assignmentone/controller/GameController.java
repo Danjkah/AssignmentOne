@@ -21,6 +21,10 @@ public class GameController {
 
         model.addAttribute("userPick", game.getUserPick());
         model.addAttribute("prize", game.getPrize());
+        model.addAttribute("lossPrizeOne", game.getPrizeLossOne());
+        model.addAttribute("lossPrizeTwo", game.getPrizeLossTwo());
+        model.addAttribute("lossPrizeThree", game.getPrizeLossThree());
+        model.addAttribute("lossPrizeFour", game.getPrizeLossFour());
 
         return "result";
     }
