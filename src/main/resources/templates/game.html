@@ -5,62 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pick a Box!</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-  <style>
-    /* General Page Styling */
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(to right, #ff9966, #ff5e62);
-      text-align: center;
-      color: white;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100vh;
-      justify-content: center;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-
-    /* Button Styling */
-    form {
-      display: flex;
-      gap: 15px;
-    }
-
-    button {
-      background: white;
-      color: #ff5e62;
-      border: none;
-      padding: 12px 20px;
-      font-size: 1.2em;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    button:hover {
-      background: #ff5e62;
-      color: white;
-      transform: scale(1.1);
-    }
-
-    @media (max-width: 600px) {
-      form {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../static/css/game.css" th:href="@{/css/game.css}">
 </head>
 <body>
 
@@ -76,4 +21,9 @@
 </form>
 
 </body>
+
+<footer>
+  <span> | Student Name: Daniel Kandiah | Student Number: 991718034 | </span>
+</footer>
+
 </html>
